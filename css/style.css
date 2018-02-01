@@ -4,7 +4,6 @@ body{
     justify-content: flex-start;
     align-content: flex-end;
     background: black;
-    overflow: hidden;
 }
 .left{
     min-width: 300px;
@@ -85,5 +84,6 @@ body{
 
 /* Future plans: 
 make '.left' stay in view when scrolling (needs js I think)
-fix the height?
+fix the body showing around?
+add colors/background images
 */
