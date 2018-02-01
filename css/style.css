@@ -1,5 +1,4 @@
 body{
-    height: 1000px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -83,3 +82,8 @@ body{
 .middle img{
     width: 200px;
 }
+
+/* Future plans: 
+make '.left' stay in view when scrolling (needs js I think)
+fix the height?
+*/
