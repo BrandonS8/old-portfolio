@@ -1,9 +1,16 @@
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+/* https://stackoverflow.com/questions/15249300/html-is-not-touching-top-of-the-browser */
+
 body{
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-content: flex-end;
-    background: black;
+    background: rgb(228, 56, 56);
+    overflow: hidden;
 }
 .left{
     min-width: 300px;
@@ -25,6 +32,10 @@ body{
 .left p{
     margin: 0;
     padding-bottom: 40px;
+}
+
+.left:hover{
+    background: rgb(71, 71, 235);
 }
 
 .circle{
@@ -53,34 +64,37 @@ body{
 .left ul a:hover{
     color: skyblue;
 }
-.right {
+
+
+.projects{
     flex-grow: 1;
     background: lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px;
-    border-left: 2px solid grey;
     text-align: center;
+    padding: 0 20px 0 20px;
+    overflow: auto;
+    height: 750px;
 }
-.right img{
-    width: 200px;
+.projects p{
+  
 }
 
-.middle{
-    flex-grow: 1;
-    background: lightgrey;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
+.projects:hover {
+    background: white;
 }
-.middle img{
-    width: 200px;
+
+#right{
+    border-left: 2px solid grey;
 }
+
+.projects img{
+    width: 400px;
+}
+
+
 
 /* Future plans: 
 make '.left' stay in view when scrolling (needs js I think)
