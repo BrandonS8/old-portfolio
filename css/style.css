@@ -3,7 +3,7 @@ html {
   height: 100%;
 }
 body {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,43 +35,44 @@ body {
 .second{
   display: none;
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
-  height: 100%;
+  justify-content: center;
   width: 100%;
 }
-.second h1{
+.secHeader{
+  width: 100%;
+}
+.secHeader h1{
   font-family: 'Amatic SC', cursive;
   font-size: 60px;
   margin: 15px;
 }
 .projects{
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
 }
 .project{
-  position: relative;
-  overflow: hidden;
   display: block;
+  position: relative;
   max-width: 480px;
-  margin: 10px;
+  margin: 5px;
 }
+
 .project img{
-  max-width: 480px;
+  width: 100%;
 }
 .hidden {
-  display: block;
+  display: inline;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  max-width: 480px;
+  width: 100%;
   background: rgba(0,0,0,.9);
   text-align: center;
-  display: inline;
   opacity: 0;
   transition: 1s;
   color: white;
@@ -85,7 +86,7 @@ body {
 }
 .hidden p{
   font-size: 15px;
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 .hidden a{
   font-size: 30px;
@@ -110,11 +111,10 @@ iframe{
   padding: none;
   border: none;
   width: 65%;
-  height: 100%;
+  min-height: 650px;
 }
 footer{
   margin: 10px 0;
-  width: 100%;
 }
 .menu{
   display: flex;
@@ -142,7 +142,19 @@ footer button{
 }
 
 @media only screen and (max-width: 1000px) {
-  .project {
-    display: block;
+  .hidden h1{
+    font-size: 30px;
+    margin: 5px 0 5px 0;
+  }
+  .hidden p{
+    font-size: 10px;
+    margin: 5px 0;
+  }
+  .hidden a{
+    font-size: 15px;
+  }
+  iframe{
+    width: 100%;
+    min-height: 400px;
   }
 }
