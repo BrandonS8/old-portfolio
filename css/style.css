@@ -13,7 +13,7 @@ body {
 }
 
 .first {
-  width: 700px;
+  max-width: 700px;
 }
 
 .first h1{
@@ -55,7 +55,7 @@ body {
 .project{
   position: relative;
   overflow: hidden;
-  display: inline-block;
+  display: block;
   max-width: 480px;
   margin: 10px;
 }
@@ -68,7 +68,7 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 480px;
+  max-width: 480px;
   background: rgba(0,0,0,.9);
   text-align: center;
   display: inline;
@@ -139,4 +139,10 @@ footer button{
   background: none;
   padding: 5px;
   border: 1px solid black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .project {
+    display: block;
+  }
 }

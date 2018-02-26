@@ -2,11 +2,12 @@ const firstHeading = document.querySelector('.first h1')
 const first = document.querySelector('.first')
 const second = document.querySelector('.second')
 const third = document.querySelector('.third')
+let ranOnce = 0
 
 document.querySelector('#homeButton').addEventListener('click', showFirst)
 document.querySelector('#portfolioButton').addEventListener('click', showSecond)
 document.querySelector('#resumeButton').addEventListener('click', showThird)
-showFirst()
+typeFirstHeading()
 
 function typeFirstHeading () {
   let words = "Hello, I'm Brandon"
@@ -42,10 +43,13 @@ function typeFirstParagraph () {
 }
 
 function displayStatement () {
-  let p = document.querySelector('.statement')
-  p.style.display = 'inline'
-  p.classList.add('show')
-  typeFirstParagraph()
+  if (ranOnce < 1) {
+    let p = document.querySelector('.statement')
+    p.style.display = 'inline'
+    p.classList.add('show')
+    typeFirstParagraph()
+    ranOnce = 1
+  }
 }
 
 setHiddens()
