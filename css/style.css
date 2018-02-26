@@ -1,163 +1,122 @@
+html {
+  height: 100%;
+}
 body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url("http://cdn.pcwallart.com/images/los-angeles-skyline-black-and-white-wallpaper-2.jpg");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  font-family: 'Roboto', sans-serif;
 }
 
-header {
-  text-align: center;
-  color: white;
+.first {
+  width: 500px;
 }
-header a {
-  color: white;
-  text-decoration: none;
+
+.first h1{
+  font-size: 45px;
 }
-h1 {
-  font-size: 70px;
-  margin-top: 0;
- }
-ul {
-  margin-top: -40px;
-  padding: 0px 0px 30px 0px;
+.statement{
+  display: none;
+  opacity: 0;
+  transition: all 6s;
+}
+.statementPromote{
+  color: red;
   font-size: 20px;
 }
-li {
-  display: inline;
-  padding: 0px 10px 0px 10px;
-}
-a {
-  text-decoration: none;
-  color: lightblue;
-}
-.container {
-  margin: 5px auto;
-  max-width: 1600px;
-  padding: 0;
-  text-align: center;
-}
-.projects {
-  height: 240px;
-  max-width: 480px;
-  background: #666;
-  padding: 0px;
-  margin: 5px 0 0 5px;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-}
-.projects img{
+.second{
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
   width: 100%;
 }
-#me {
-  margin: 40px 0px 0px 0px;
-  border: 3px solid white;
-  border-radius: 100px;
-  height: 200px;
-  width: 200px;
+.second h1{
+  font-size: 60px;
+  margin: 15px;
 }
-
-.about {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 30px;
-  width: 50px;
-  background: #7DCDF5;
-  border: solid 1px #7DCDF5;
-  border-radius: 0 10px 0 0;
-  color: white;
-  font-size: 15px;
-  line-height: 30px;
-  z-index: 1;
-  text-align: center;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none; 
-  user-select: none;
+.projects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
-
-.view {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 30px;
-  width: 50px;
-  background: #61C368;
-  border: solid 1px #61C368;
-  border-radius: 10px 0 0 0;
-  color: white;
-  font-size: 15px;
-  line-height: 30px;
-  z-index: 1;
-  text-align: center;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none; 
-  user-select: none;                      
+.project{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 480px;
+  margin: 10px;
 }
-
-.desc {
+.project img{
+  max-width: 480px;
+}
+.hidden {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   height: 240px;
   width: 480px;
-  background: rgba(0,0,0,.5);
-  margin: 0;
+  background: rgba(0,0,0,.7);
   text-align: center;
   display: inline;
   opacity: 0;
   transition: 1s;
+  color: white;
 }
-.desc p {
-  padding-top: 88px;
-}
-.showdesc {
+.show {
   opacity: 1;
 }
+.hidden h1{
+  font-size: 40px;
+  margin: 20px 0 20px 0;
+}
+.hidden p{
+  font-size: 15px;
+  margin: 8px 0;
+}
+.hidden a{
+  font-size: 30px;
+}
 
+.hidden a:hover{
+  color: lightblue;
+  user-select: none;
+}
 
-
-@media (max-width: 700px) {
-  .projects {
-    width: 100%;
-    margin: 8px 0 0 0;
-  }
-  h1 {
-    font-size: 25px;
-  }
-  #me{
-    display: none;
-  }
-  ul{
-    margin-top: 10px;
-    padding: 0;
-  }
-  li {
-    display: block;
-    padding: 0px;
-  }
-
-  .projects img {
-    position: absolute;
-    top: 0;
-    left: 0%;
-    width: auto;
-  }
-  .desc p {
-    padding-top: 77px;
-  }
-  .desc {
-    width: 100%;
-    height: 100%;
-  }
+.third{
+  width: 75%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+iframe{
+  margin: 0 auto;
+  padding: none;
+  border: none;
+  width: 65%;
+  height: 100%;
+}
+footer{
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p{
+  margin: 0 10px;
+}
+footer button{
+  background: none;
+  padding: 5px;
+  border: 1px solid black;
 }

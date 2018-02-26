@@ -1,82 +1,74 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Brandon Sears</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body> 
- <header>
-  <img id="me" src="http://via.placeholder.com/200x200">
-  <h1>Brandon's Projects</h1>
-    <ul>
-      <li><a href="#">Links</a></li>
-      <li><a href="#">For</a></li>
-      <li><a href="#">Future Use</a></li>
-    </ul>
-  </header>
-  <div class="container">
-    <div class="projects">
-      <img src="img/project1.png">
-      <div class="about">About</div>
-      <a class="view" href="https://github.com/BrandonS8/project1-hangman" target="_blank">View</a>
-      <div class="desc">
-        <p>HATERMAKER is a take on the classic Hangman game. Made with vanilla javascript. I chose to do this as my first project in my Web Development class at General Assembly. 
-          <br/> Play it <a href = 'https://brandons8.github.io/project1-hangman' target='_blank'>here</a> <br> View the code <a href = 'https://github.com/BrandonS8/project1-hangman/' target='_blank'>here</a></p>
-        </div>
+<body>
+    <div class='first'>
+      <h1></h1>
+      <p class='statement'>I am a <span class='statementPromote'>Full Stack Web Developer</span> that implements creative ideas to construct <span class='statementPromote'>user friendly</span> and functional applications. My <span class='statementPromote'>goal oriented</span> way of thinking allows me to <span class='statementPromote'>meet deadlines</span> or goals in an <span class='statementPromote'>efficient</span> manner without sacrificing any functionality or user experiences.
+      </p>
     </div>
-    <div class="projects">
-     <img src="http://via.placeholder.com/480x240">
-      <div class="about">About</div>
-      <a class="view" href="google.com" target="_blank">View</a>
-      <div class="desc">
-        <p>This is some information about the project, nothing to say right now but yea here.</p>
+    <div class='second'>
+      <h1>Projects</h1>
+      <div class='projects'>
+        <div class='project'>
+          <img src='img/project1.png'>
+          <div class='hidden'>
+              <h1>HATERMAKER</h1>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, doloremque blanditiis consectetur doloribus dolore quae, sed qui inventore, corrupti voluptates voluptatum amet magni labore voluptate? Error quam ab natus ipsam.</p>
+              <a href="#">Code</a>
+              <br>
+              <a href="#">Deployed</a>
+          </div>
         </div>
+        <div class='project'>
+            <img src='http://via.placeholder.com/480x240'>
+            <div class='hidden'>
+                <h1>NAME</h1>
+                <p>Info about the project</p>
+                <a href="#">Code</a>
+                <br>
+                <a href="#">Deployed</a>
+          </div>
+          </div>
+          <div class='project'>
+              <img src='http://via.placeholder.com/480x240'>
+              <div class='hidden'>
+                  <h1>NAME</h1>
+                  <p>Info about the project</p>
+                  <a href="#">Code</a>
+                  <br>
+                  <a href="#">Deployed</a>
+              </div>
+          </div>
+          <div class='project'>
+              <img src='http://via.placeholder.com/480x240'>
+              <div class='hidden'>
+                  <h1>NAME</h1>
+                  <p>Info about the project</p>
+                  <a href="#">Code</a>
+                  <br>
+                  <a href="#">Deployed</a>
+              </div>
+            </div>
+      </div>
     </div>
-    <div class="projects">
-      <img src="http://via.placeholder.com/480x240">
-      <div class="about">About</div>
-      <a class="view" href="google.com" target="_blank">View</a>
-      <div class="desc">
-        <p>This is some information about the project, nothing to say right now but yea here.</p>
-        </div>
+    <div class='third'>
+      <iframe src="https://docs.google.com/document/d/e/2PACX-1vTdoS10EPeOW4GUSMHLSP2ySbkj-v6GMV1u3lQ_oKf8lcdTGGlskx-JRegyhIpbUMwJ1M8ztaBp66Co/pub?embedded=true"></iframe>
     </div>
-    <div class="projects">
-      <img src="http://via.placeholder.com/480x240">
-      <div class="about">About</div>
-      <a class="view" href="google.com" target="_blank">View</a>
-      <div class="desc">
-        <p>This is some information about the project, nothing to say right now but yea here.</p>
-        </div>
-    </div>
-    <div class="projects">
-      <img src="http://via.placeholder.com/480x240">
-      <div class="about">About</div>
-      <a class="view" href="google.com" target="_blank">View</a>
-      <div class="desc">
-        <p>This is some information about the project, nothing to say right now but yea here.</p>
-        </div>
-    </div>
-    <div class="projects">
-      <img src="http://via.placeholder.com/480x240">
-      <div class="about">About</div>
-      <a class="view" href="google.com" target="_blank">View</a>
-      <div class="desc">
-        <p>This is some information about the project, nothing to say right now but yea here.</p>
-        </div>
-    </div>
-</div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+    <footer>
+        <button id='homeButton'>Home</button>
+        <p> | </p>
+        <button id='portfolioButton'>Portfolio</button>
+        <p> | </p>
+        <button id='resumeButton'>Resume</button>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
-
 </html>
