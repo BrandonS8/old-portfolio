@@ -4,6 +4,6 @@ I have remade my portfolio from scratch using vanilla javascript, css, and html.
 
 ## Future Ideas
 
-Showing an animated gif of the project when you over over it.
-Will eventually have a cool transition between pages instead of just using a lot of display: none.
-Cooler design stuff, IDK what I wanna do with it yet, but it will be cool.
+*Showing an animated gif of the project when you over over it.
+*Will eventually have a cool transition between pages instead of just using a lot of display: none.
+*Cooler design stuff, IDK what I wanna do with it yet, but it will be cool.
