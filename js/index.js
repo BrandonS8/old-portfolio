@@ -10,8 +10,7 @@ document.querySelector('#resumeButton').addEventListener('click', showThird)
 typeFirstHeading()
 
 function typeFirstHeading () {
-  let words = "Hello, I'm Brandon"
-  let letters = words.split('')
+  let letters = splitString("Hello, I'm Brandon", 'letters')
   let display = []
   let i = 0
   let type = setInterval(function () {
@@ -22,14 +21,22 @@ function typeFirstHeading () {
       setTimeout(displayStatement, 800)
       clearInterval(type)
     }
-  }, 150)
+  }, 100)
+}
+
+function splitString (stringToSplit, wordsOrLetters) {
+  let words = stringToSplit
+  if (wordsOrLetters === 'letters') {
+    return words.split('')
+  } else {
+    return words.split(' ')
+  }
 }
 
 function typeFirstParagraph () {
   let statement = document.querySelector('.statement')
-  let words = statement.innerHTML
+  let letters = splitString(statement.innerHTML, 'words')
   statement.innerHTML = ''
-  let letters = words.split(' ')
   let display = []
   let i = 0
   let type = setInterval(function () {
@@ -39,7 +46,7 @@ function typeFirstParagraph () {
     if (i > letters.length - 1) {
       clearInterval(type)
     }
-  }, 100)
+  }, 80)
 }
 
 function displayStatement () {
@@ -58,7 +65,6 @@ function setHiddens () {
   for (i = 0; i < a.length; i++) {
     a[i].addEventListener('click', function () {
       this.classList.toggle('show')
-      console.log(this.childNodes[5])
       this.childNodes[5].classList.toggle('inline')
       this.childNodes[9].classList.toggle('inline')
     })
