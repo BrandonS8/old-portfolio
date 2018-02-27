@@ -88,13 +88,23 @@ body {
   font-size: 15px;
   margin: 20px 10px;
 }
-.hidden a{
-  font-size: 30px;
+.aHidden{
+  margin: 4px 0;
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: none;
+  font-size: 25px;
+  transition: 0.5s;
 }
 
-.hidden a:hover{
-  color: lightblue;
+.aHidden:hover{
+  background: rgba(140, 201, 216, 0.7);
+  border-radius: 10px;
   user-select: none;
+}
+.inline{
+  display: inline-block;
 }
 
 .third{
@@ -122,7 +132,9 @@ footer{
   align-items: center;
 }
 .social{
+  text-align: center;
   margin-top: 10px;
+  padding-right: 11px;
 }
 
 .social i{

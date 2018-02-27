@@ -58,6 +58,9 @@ function setHiddens () {
   for (i = 0; i < a.length; i++) {
     a[i].addEventListener('click', function () {
       this.classList.toggle('show')
+      console.log(this.childNodes[5])
+      this.childNodes[5].classList.toggle('inline')
+      this.childNodes[9].classList.toggle('inline')
     })
   }
 }
