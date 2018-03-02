@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Open+Sans+Condensed:300');
+
 html {
   height: 100%;
 }
@@ -16,98 +17,98 @@ body {
   max-width: 700px;
 }
 
-.first h1{
+.first h1 {
   font-size: 45px;
   font-family: 'Amatic SC', cursive;
 }
-.statement{
-  font-size: 18px;
+.statement {
   display: none;
   opacity: 0;
   transition: all 6s;
+  font-size: 18px;
   font-family: 'Open Sans Condensed', sans-serif;
 }
-.statementPromote{
+.statementPromote {
   color: red;
   font-size: 24px;
   font-family: 'Amatic SC', cursive;
 }
-.second{
+.second {
+  width: 100%;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.secHeader {
   width: 100%;
 }
-.secHeader{
-  width: 100%;
-}
-.secHeader h1{
+.secHeader h1 {
   font-family: 'Amatic SC', cursive;
   font-size: 60px;
   margin: 15px;
 }
-.projects{
+.projects {
   margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
-.project{
+.project {
+  max-width: 480px;
   display: block;
   position: relative;
-  max-width: 480px;
   margin: 5px;
 }
 
-.project img{
+.project img {
   width: 100%;
 }
 .hidden {
+  height: 100%;
+  width: 100%;
   display: inline;
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0,0,0,.9);
-  text-align: center;
+  background: rgba(0, 0, 0, 0.9);
   opacity: 0;
   transition: 1s;
   color: white;
+  text-align: center;
 }
 .show {
   opacity: 1;
 }
-.hidden h1{
-  font-size: 40px;
+.hidden h1 {
   margin: 20px 0 20px 0;
+  font-size: 40px;
 }
-.hidden p{
-  font-size: 15px;
+.hidden p {
   margin: 20px 10px;
+  font-size: 15px;
 }
-.aHidden{
+.aHidden {
   margin: 4px 0;
   padding: 8px;
+  display: none;
   border: 1px solid white;
   border-radius: 5px;
-  display: none;
-  font-size: 25px;
   transition: 0.5s;
+  font-size: 25px;
 }
 
-.aHidden:hover{
+.aHidden:hover {
   background: rgba(140, 201, 216, 0.7);
   border-radius: 10px;
   user-select: none;
 }
-.inline{
+.inline {
   display: inline-block;
 }
 
-.third{
+.third {
   width: 75%;
   height: 100%;
   margin: 0;
@@ -116,56 +117,56 @@ body {
   justify-content: center;
   align-items: center;
 }
-iframe{
+iframe {
   margin: 0 auto;
   padding: none;
   border: none;
   width: 65%;
   min-height: 650px;
 }
-footer{
+footer {
   margin: 10px 0;
 }
-.menu{
+.menu {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.social{
-  text-align: center;
+.social {
   margin-top: 10px;
   padding-right: 11px;
+  text-align: center;
 }
 
-.social i{
-  font-size: 30px;
+.social i {
   margin: 5px;
+  font-size: 30px;
 }
-.social i:hover{
+.social i:hover {
   color: lightblue;
 }
-footer p{
+footer p {
   margin: 0 10px;
 }
-footer button{
-  background: none;
+footer button {
   padding: 5px;
   border: 1px solid black;
+  background: none;
 }
 
 @media only screen and (max-width: 1000px) {
-  .hidden h1{
-    font-size: 30px;
+  .hidden h1 {
     margin: 5px 0 5px 0;
+    font-size: 30px;
   }
-  .hidden p{
-    font-size: 10px;
+  .hidden p {
     margin: 5px 0;
+    font-size: 10px;
   }
-  .hidden a{
+  .hidden a {
     font-size: 15px;
   }
-  iframe{
+  iframe {
     width: 100%;
     min-height: 400px;
   }

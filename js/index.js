@@ -2,11 +2,20 @@ const firstHeading = document.querySelector('.first h1')
 const first = document.querySelector('.first')
 const second = document.querySelector('.second')
 const third = document.querySelector('.third')
+const screens = [first, second, third]
 let ranOnce = 0
 
-document.querySelector('#homeButton').addEventListener('click', showFirst)
-document.querySelector('#portfolioButton').addEventListener('click', showSecond)
-document.querySelector('#resumeButton').addEventListener('click', showThird)
+document.querySelector('#homeButton').addEventListener('click', function () {
+  show(first)
+})
+document
+  .querySelector('#portfolioButton')
+  .addEventListener('click', function () {
+    show(second)
+  })
+document.querySelector('#resumeButton').addEventListener('click', function () {
+  show(third)
+})
 typeFirstHeading()
 
 function typeFirstHeading () {
@@ -71,19 +80,22 @@ function setHiddens () {
   }
 }
 
-function showFirst () {
-  typeFirstHeading()
-  first.style.display = 'block'
-  second.style.display = 'none'
-  third.style.display = 'none'
-}
-function showSecond () {
-  first.style.display = 'none'
-  second.style.display = 'flex'
-  third.style.display = 'none'
-}
-function showThird () {
-  first.style.display = 'none'
-  second.style.display = 'none'
-  third.style.display = 'flex'
+function show (screen) {
+  console.log(screen)
+  let hiddenScreens = []
+  // get position of 'screen'
+  let indexOfScreen = screens.indexOf(screen)
+  // add the ones that arent the 'screen' to hidden array
+  hiddenScreens = screens.filter(word => screens.indexOf(word) != indexOfScreen)
+  // hide the hiddenScreens
+  for (i = 0; i < hiddenScreens.length; i++) {
+    hiddenScreens[i].style.display = 'none'
+  }
+  // show this one
+  if (screen === first) {
+    screens[indexOfScreen].style.display = 'block'
+    typeFirstHeading()
+  } else {
+    screens[indexOfScreen].style.display = 'flex'
+  }
 }
