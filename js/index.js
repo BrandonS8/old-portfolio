@@ -5,24 +5,24 @@ const third = document.querySelector('.third')
 const screens = [first, second, third]
 let ranOnce = 0
 
-document.querySelector('#homeButton').addEventListener('click', function () {
+document.querySelector('#homeButton').addEventListener('click', function() {
   show(first)
 })
 document
   .querySelector('#portfolioButton')
-  .addEventListener('click', function () {
+  .addEventListener('click', function() {
     show(second)
   })
-document.querySelector('#resumeButton').addEventListener('click', function () {
+document.querySelector('#resumeButton').addEventListener('click', function() {
   show(third)
 })
 typeFirstHeading()
 
-function typeFirstHeading () {
+function typeFirstHeading() {
   let letters = splitString("Hello, I'm Brandon", 'letters')
   let display = []
   let i = 0
-  let type = setInterval(function () {
+  let type = setInterval(function() {
     display.push(letters[i])
     i++
     firstHeading.innerHTML = display.join('')
@@ -33,7 +33,7 @@ function typeFirstHeading () {
   }, 100)
 }
 
-function splitString (stringToSplit, wordsOrLetters) {
+function splitString(stringToSplit, wordsOrLetters) {
   let words = stringToSplit
   if (wordsOrLetters === 'letters') {
     return words.split('')
@@ -42,13 +42,13 @@ function splitString (stringToSplit, wordsOrLetters) {
   }
 }
 
-function typeFirstParagraph () {
+function typeFirstParagraph() {
   let statement = document.querySelector('.statement')
   let letters = splitString(statement.innerHTML, 'words')
   statement.innerHTML = ''
   let display = []
   let i = 0
-  let type = setInterval(function () {
+  let type = setInterval(function() {
     display.push(letters[i])
     i++
     statement.innerHTML = display.join(' ')
@@ -58,7 +58,7 @@ function typeFirstParagraph () {
   }, 80)
 }
 
-function displayStatement () {
+function displayStatement() {
   if (ranOnce < 1) {
     let p = document.querySelector('.statement')
     p.style.display = 'inline'
@@ -69,10 +69,10 @@ function displayStatement () {
 }
 
 setHiddens()
-function setHiddens () {
+function setHiddens() {
   let a = document.querySelectorAll('.hidden')
   for (i = 0; i < a.length; i++) {
-    a[i].addEventListener('click', function () {
+    a[i].addEventListener('click', function() {
       this.classList.toggle('show')
       this.childNodes[5].classList.toggle('inline')
       this.childNodes[9].classList.toggle('inline')
@@ -80,8 +80,7 @@ function setHiddens () {
   }
 }
 
-function show (screen) {
-  console.log(screen)
+function show(screen) {
   let hiddenScreens = []
   // get position of 'screen'
   let indexOfScreen = screens.indexOf(screen)
