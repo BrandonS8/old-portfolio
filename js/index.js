@@ -55,7 +55,7 @@ function typeFirstParagraph() {
     if (i > letters.length - 1) {
       clearInterval(type)
     }
-  }, 80)
+  }, 40)
 }
 
 function displayStatement() {
